@@ -1,0 +1,56 @@
+///////////////////////////// RUN 1 /////////////////////////////////////
+
+nvcc matrixMult.cu matrix.cpp help.cpp test.cpp -o project2
+./project2
+RUNNING Matrix MULTIPLICATION TESTCASE:  CUDA version 
+Testing A (3x2) * B (2x3) = C (3x3) : ... ok 
+Testing B (2x3) * A (3x2) = C (2x2) : ... ok 
+Testing E (2x3) * E (3x2) = C (2x2) : ... ok 
+Testing E (100x100) * E (100x100) = C (100x100) : ... ok 
+
+Benchmarking sequential program with n = 500 -> 0.007 seconds for benchmark
+
+Benchmarking sequential program with n = 750 -> 0.018 seconds for benchmark
+
+Benchmarking sequential program with n = 2000 -> 0.259 seconds for benchmark
+
+Benchmarking sequential program with n = 10000 -> 10.252 seconds for benchmark
+
+////////////////////////////// RUN 2 //////////////////////////////////////
+
+rm project2
+nvcc matrixMult.cu matrix.cpp help.cpp test.cpp -o project2
+./project2
+RUNNING Matrix MULTIPLICATION TESTCASE:  CUDA version 
+Testing A (3x2) * B (2x3) = C (3x3) : ... ok 
+Testing B (2x3) * A (3x2) = C (2x2) : ... ok 
+Testing E (2x3) * E (3x2) = C (2x2) : ... ok 
+Testing E (100x100) * E (100x100) = C (100x100) : ... ok 
+
+Benchmarking sequential program with n = 500 -> 0.006 seconds for benchmark
+
+Benchmarking sequential program with n = 750 -> 0.016 seconds for benchmark
+
+Benchmarking sequential program with n = 2000 -> 0.249 seconds for benchmark
+
+Benchmarking sequential program with n = 10000 -> 11.067 seconds for benchmark
+
+////////////////////////////// RUN 3 ///////////////////////////////////////
+
+rm project2
+nvcc matrixMult.cu matrix.cpp help.cpp test.cpp -o project2
+./project2
+RUNNING Matrix MULTIPLICATION TESTCASE:  CUDA version 
+Testing A (3x2) * B (2x3) = C (3x3) : ... ok 
+Testing B (2x3) * A (3x2) = C (2x2) : ... ok 
+Testing E (2x3) * E (3x2) = C (2x2) : ... ok 
+Testing E (100x100) * E (100x100) = C (100x100) : ... ok 
+Benchmarking sequential program with n = 500 -> 0.007 seconds for benchmark
+
+Benchmarking sequential program with n = 750 -> 0.018 seconds for benchmark
+
+Benchmarking sequential program with n = 2000 -> 0.260 seconds for benchmark
+
+Benchmarking sequential program with n = 10000 -> 8.850 seconds for benchmark
+
+rm project2

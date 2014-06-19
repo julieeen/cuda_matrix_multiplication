@@ -1,0 +1,8 @@
+Installing CUDA on OSX
+http://docs.nvidia.com/cuda/cuda-getting-started-guide-for-mac-os-x/#download-cuda-software
+
+Add all helpful files from project1
+Rename all .c to .cpp, because nvcc is a c++ compiler/wrapper
+Otherwise u have bad linking errors.
+
+// CUDA only support float numbers, for reasons
